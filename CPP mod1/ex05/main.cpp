@@ -1,14 +1,12 @@
 #include "Harl.hpp"
 
-int main(int argc, char **argv)
+int main(void)
 {
   Harl harl;
-  if(argc < 2)
-  {
-    std::cout << "Please enter a option" << std::endl;
-    return(0);
-  }
-  harl.complain(argv[1]);
+  harl.complain("DEBUG");
+  harl.complain("INFO");
+  harl.complain("WARNING");
+  harl.complain("ERROR");
   return(0);
 
 }

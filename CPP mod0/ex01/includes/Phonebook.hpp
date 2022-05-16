@@ -17,6 +17,7 @@ class PhoneBook
   private:
     static int _index;
     int _get_index(void);
+    static int _index2;
 };
 
 #endif

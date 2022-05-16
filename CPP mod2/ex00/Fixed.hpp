@@ -7,18 +7,15 @@ class Fixed
 {
   public:
     Fixed(void);
-    Fixed(int const n);
-    Fixed& operator(Sample const& rhs);
+    Fixed& operator=(Fixed const & rhs);
     Fixed(Fixed const &src);
     ~Fixed(void);
-
-
+    int getRawBits( void ) const;
+    void setRawBits( int const raw );
 
   private:
     int _nbr;
-    int const static _fra;
-
-
+    int const static _fractionalBits = 8;
 };
 
 
