@@ -6,16 +6,18 @@ Fixed::Fixed(void): _nbr(0)
     return ;
 }
 
-Fixed::Fixed(int nbr):
+Fixed::Fixed(const int nbr)
 {
+    this->_nbr = nbr << this->_fractionalBits;
     std::cout << "Int constructor Call" << std::endl;
-    return ;
+    return;
 }
 
-Fixed::Fixed(float nbr):
+Fixed::Fixed(const float nbr)
 {
+    this->_nbr = roundf(nbr * (1 << _fractionalBits));
     std::cout << "Float constructor Call" << std::endl;
-    return ;
+    return;
 }
 
 Fixed::Fixed(Fixed const & src)
@@ -27,13 +29,11 @@ Fixed::Fixed(Fixed const & src)
 
 void Fixed::setRawBits(int const raw)
 {
-    std::cout <<"setRawBits member function called" <<std::endl;
     this->_nbr = raw;
 }
 
 int Fixed::getRawBits(void) const
 {
-    std::cout <<"getRawBits member function called" <<std::endl;
     return(this->_nbr);
 }
 
@@ -45,23 +45,23 @@ Fixed & Fixed::operator=(Fixed const & rhs)
     return *this;
 }
 
-int Fixed::toInt(void) vonct
+int Fixed::toInt(void) const
 {
-    return((int)this->_nbr >> this->_fractionalBits)
+    return((int)this->_nbr >> this->_fractionalBits);
 }
 
-int Fixed::toFloat(void) vonct
+float Fixed::toFloat(void) const
 {
-    return((float)this->_nbr << (1 / this->_fractionalBits))
+    return ((float)this->_nbr / (float)(1 << this->_fractionalBits));
 }
 
-str::ostream & operator<<(std::ostream & o, Integer const & rh)
+std::ostream & operator<<(std::ostream & o, Fixed const & rhs)
 {
-    o<<rhs.getRawBits();
+    o << rhs.toFloat();
     return(o);
 }
 
 Fixed::~Fixed(void)
 {
-    std::cout <<"Destructor called" <<std::endl;
+    std::cout << "Destructor called" << std::endl;
 }
