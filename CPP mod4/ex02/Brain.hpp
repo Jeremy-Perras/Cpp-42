@@ -14,4 +14,6 @@ class Brain
         std::string _ideas[100];
 };
 
+
+
 #endif

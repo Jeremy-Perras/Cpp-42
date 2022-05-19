@@ -3,7 +3,7 @@
 Cat::Cat(void)
 {
     std::cout << "Cat Constuctor" << std::endl;
-    this->Animal::_type = "Cat";
+    this->Animal::_type = "Cat"; // peut s'ecrire aussi ainsi
     this->_Brain = new Brain();
     return;
 }
@@ -34,7 +34,7 @@ void Cat::makeSound(void) const
 
 Cat::~Cat(void)
 {
-    delete _Brain;
+    delete this->_Brain;
     std::cout << "Cat Destructor" << std::endl;
     return;
 }

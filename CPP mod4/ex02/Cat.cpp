@@ -3,7 +3,8 @@
 Cat::Cat(void)
 {
     std::cout << "Cat Constuctor" << std::endl;
-    this->Animal::_type = "Cat"; // peut s'ecrire aussi ainsi
+    this->AAnimal::_type = "Cat"; // peut s'ecrire aussi ainsi
+    this->_Brain = new Brain();
     return;
 }
 
@@ -13,6 +14,8 @@ Cat & Cat::operator=(Cat const &rhs)
     if(this == &rhs)
         return(*this);
     this->_type = rhs._type;
+    this->_Brain = new Brain();
+    this->_Brain = rhs._Brain;
     return(*this);
 }
 
@@ -31,6 +34,7 @@ void Cat::makeSound(void) const
 
 Cat::~Cat(void)
 {
+    delete this->_Brain;
     std::cout << "Cat Destructor" << std::endl;
     return;
 }
