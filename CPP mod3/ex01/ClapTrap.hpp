@@ -1,5 +1,7 @@
-#include <iostream>
+#ifndef CLAPTRAP_H
 
+# define CLAPTRAP_H
+# include <iostream>
 class ClapTrap
 {
     public:
@@ -13,9 +15,10 @@ class ClapTrap
         void takeDamage(unsigned int amount);
         void beRepaired(unsigned int amount);
 
-    private:
+    protected:
         std::string _Name;
         int _Hit;
         int _Energy;
         int _Attack;
 };
+# endif

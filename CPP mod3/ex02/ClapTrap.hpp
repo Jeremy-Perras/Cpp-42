@@ -16,10 +16,11 @@ class ClapTrap
         void takeDamage(unsigned int amount);
         void beRepaired(unsigned int amount);
 
-    private:
+    protected:
         std::string _Name;
         int _Hit;
         int _Energy;
         int _Attack;
 };
-# endif
+
+#endif

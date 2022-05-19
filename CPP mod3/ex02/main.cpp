@@ -1,9 +1,11 @@
 # include "ScavTrap.hpp"
+# include "FragTrap.hpp"
 
 int main()
 {
-    ClapTrap claptrap("Jeremy");
-    ScavTrap scavtrap("Damir");
+    ClapTrap claptrap("Damir");
+    ScavTrap scavtrap("Jeremy");
+    FragTrap fragtrap("Test");
 
     claptrap.attack("Damir");
     claptrap.beRepaired(3);
@@ -13,5 +15,7 @@ int main()
     claptrap.beRepaired(3);
     scavtrap.guardGate();
     scavtrap.attack("Jeremy");
+    fragtrap.highFivesGuys();
+    fragtrap.attack("Jeremy");
 
 }

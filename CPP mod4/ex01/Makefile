@@ -1,6 +1,6 @@
-NAME = ClapTrap
+NAME = Animal
 
-SRCS = main.cpp ClapTrap.cpp ScavTrap.cpp
+SRCS = main.cpp Dog.cpp Animal.cpp Cat.cpp WrongAnimal.cpp WrongCat.cpp Brain.cpp
 
 INCLUDES = -I.
 
