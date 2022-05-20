@@ -13,6 +13,7 @@ Dog & Dog::operator=(Dog const &rhs)
     std::cout << "Dog Assignement" << std::endl;
     if(this == &rhs)
         return(*this);
+    this->_type = rhs._type;
     delete this->_Brain;
     this->_Brain = new Brain(*rhs._Brain);
     this->_type = rhs._type;

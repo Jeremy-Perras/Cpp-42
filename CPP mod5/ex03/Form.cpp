@@ -64,6 +64,12 @@ void Form::beSigned(Bureaucrat &b)
     this->_signed = true;
 }
 
+void Form::execute(Bureaucrat const & executor) const
+{
+    (void) executor;
+    return ;
+}
+
 Form::~Form(void)
 {
     return ;
