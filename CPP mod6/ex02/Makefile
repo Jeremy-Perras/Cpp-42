@@ -1,6 +1,6 @@
-NAME = convert
+NAME = Type
 
-SRCS = main.cpp convert.cpp
+SRCS = main.cpp Base.cpp A.cpp B.cpp C.cpp
 
 INCLUDES = -I./includes
 

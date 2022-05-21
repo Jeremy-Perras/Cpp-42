@@ -1,6 +1,6 @@
-NAME = convert
+NAME = Template
 
-SRCS = main.cpp convert.cpp
+SRCS = main.cpp
 
 INCLUDES = -I./includes
 

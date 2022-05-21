@@ -1,7 +1,6 @@
-NAME = convert
+NAME = serialize
 
-SRCS = main.cpp convert.cpp
-
+SRCS = main.cpp serialize.cpp
 INCLUDES = -I./includes
 
 OBJS = $(SRCS:.cpp=.o)
