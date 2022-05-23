@@ -1,6 +1,6 @@
-NAME = Array
+NAME = Span
 
-SRCS = main.cpp
+SRCS = main.cpp Span.cpp
 
 INCLUDES = -I./includes
 
